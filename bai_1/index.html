@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thực đơn cà phê, bánh ngọt và trà trái cây cao cấp tại The Cozy Bean - Tận hưởng từng phút giây lắng đọng bên tách cà phê đậm đà.">
+    <title>The Cozy Bean - Coffee & Bakery | Thực Đơn Quán Cà Phê</title>
+    <!-- Liên kết file CSS nằm trong thư mục css/ -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome cho icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- YC3: HEADER chứa Logo, Tên quán, Slogan -->
+    <header id="hero-header">
+        <div class="header-overlay">
+            <div class="top-bar">
+                <div class="logo-box">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=100&q=80" alt="Logo The Cozy Bean" class="logo-img">
+                    <div class="logo-text">
+                        <span class="brand-name">THE COZY BEAN</span>
+                        <span class="brand-sub">COFFEE & BAKERY</span>
+                    </div>
+                </div>
+                <div class="cart-badge">
+                    <i class="fa-solid fa-cart-shopping"></i> Giỏ hàng (<span id="cart-count">0</span>)
+                </div>
+            </div>
+
+            <div class="hero-content">
+                <p class="welcome-text">Welcome to</p>
+                <h1>THE COZY BEAN</h1>
+                <p class="slogan">"Tận hưởng từng phút giây lắng đọng cùng tách cà phê đậm đà"</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- YC4: NAVIGATION thanh menu ngang với tối thiểu 4 mục -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#all" class="nav-link active"><i class="fa-solid fa-list"></i> Tất Cả</a></li>
+            <li><a href="#coffee" class="nav-link"><i class="fa-solid fa-mug-hot"></i> Cà Phê & Trà</a></li>
+            <li><a href="#bakery" class="nav-link"><i class="fa-solid fa-cookie-bite"></i> Bánh Ngọt</a></li>
+            <li><a href="#hot" class="nav-link"><i class="fa-solid fa-fire"></i> Món Hot</a></li>
+            <li><a href="#contact" class="nav-link"><i class="fa-solid fa-location-dot"></i> Liên Hệ / Đặt Bàn</a></li>
+        </ul>
+    </nav>
+
+    <!-- Khối thanh lọc theo danh mục nhanh -->
+    <div class="filter-bar-container">
+        <div class="filter-title-box">
+            <span class="sub-title">THỰC ĐƠN CHỌN LỌC</span>
+            <h2>Khám Phá Hương Vị</h2>
+        </div>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Tất Cả Món</button>
+            <button class="filter-btn" data-filter="coffee">Cà Phê</button>
+            <button class="filter-btn" data-filter="tea">Trà Tươi & Macchiato</button>
+            <button class="filter-btn" data-filter="bakery">Bánh & Tráng Miệng</button>
+        </div>
+    </div>
+
+    <!-- Bố cục chính gồm MAIN và ASIDE -->
+    <div class="layout-container">
+        
+        <!-- YC5: NỘI DUNG CHÍNH (MAIN) chứa nhiều SECTION -->
+        <main class="main-content">
+
+            <!-- SECTION 1: CÀ PHÊ TRUYỀN THỐNG & PHA MÁY -->
+            <section id="coffee-section" class="menu-section" data-category="coffee">
+                <h2 class="section-title">Cà Phê Truyền Thống & Pha Máy</h2>
+
+                <div class="products-grid">
+                    <!-- YC6: Mỗi món là ARTICLE độc lập -->
+                    <article class="menu-card" data-category="coffee">
+                        <div class="card-thumb">
+                            <span class="badge best-seller">BEST SELLER</span>
+                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=500&q=80" alt="Cà Phê Muối Cozy">
+                        </div>
+                        <div class="card-body">
+                            <h3>Cà Phê Muối Cozy</h3>
+                            <p>Sự kết hợp hoàn hảo giữa vị cà phê phin đậm đà và lớp kem muối béo ngậy...</p>
+                            <div class="card-footer">
+                                <span class="price-tag">30.000đ</span>
+                                <button class="btn-order" onclick="addToCart('Cà Phê Muối Cozy')">+ Đặt món</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="menu-card" data-category="coffee">
+                        <div class="card-thumb">
+                            <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?w=500&q=80" alt="Baciu Espresso">
+                        </div>
+                        <div class="card-body">
+                            <h3>Baciu Espresso</h3>
+                            <p>Nhiều sữa đặc ngọt dịu hòa quyện 2 shot Espresso nguyên chất thơm...</p>
+                            <div class="card-footer">
+                                <span class="price-tag">35.000đ</span>
+                                <button class="btn-order" onclick="addToCart('Baciu Espresso')">+ Đặt món</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="menu-card" data-category="coffee">
+                        <div class="card-thumb">
+                            <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?w=500&q=80" alt="Latte Hạt Dẻ Nóng">
+                        </div>
+                        <div class="card-body">
+                            <h3>Latte Hạt Dẻ Nóng</h3>
+                            <p>Sữa tươi đánh nóng mềm mịn ngậy hương syrup hạt dẻ nướng và cà ph...</p>
+                            <div class="card-footer">
+                                <span class="price-tag">45.000đ</span>
+                                <button class="btn-order" onclick="addToCart('Latte Hạt Dẻ Nóng')">+ Đặt món</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="menu-card" data-category="coffee">
+                        <div class="card-thumb">
+                            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=500&q=80" alt="Cold Brew Cam Sả">
+                        </div>
+                        <div class="card-body">
+                            <h3>Cold Brew Cam Sả</h3>
+                            <p>Cà phê ủ lạnh 16 tiếng kết hợp nước cam tươi thanh mát và hương sả n...</p>
+                            <div class="card-footer">
+                                <span class="price-tag">40.000đ</span>
+                                <button class="btn-order" onclick="addToCart('Cold Brew Cam Sả')">+ Đặt món</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="menu-card" data-category="coffee">
+                        <div class="card-thumb">
+                            <img src="https://images.unsplash.com/photo-1585220178688-6625ff115e4f?w=500&q=80" alt="Cà Phê Trứng Béo Dẻo">
+                        </div>
+                        <div class="card-body">
+                            <h3>Cà Phê Trứng Béo Dẻo</h3>
+                            <p>Lớp kem trứng đánh bông mịn màng không tanh, hòa quyện phin đậm đà...</p>
+                            <div class="card-footer">
+                                <span class="price-tag">42.000đ</span>
+                                <button class="btn-order" onclick="addToCart('Cà Phê Trứng Béo Dẻo')">+ Đặt món</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="menu-card" data-category="coffee">
+                        <div class="card-thumb placeholder-thumb">
+                            <span class="placeholder-text">Americano</span>
+                        </div>
+                        <div class="card-body">
+                            <h3>Americano Mật Ong</h3>
+                            <p>Sự kết hợp đơn giản nhẹ nhàng giữa Espresso đắng và vị ngọt thanh đ...</p>
+                            <div class="card-footer">
+                                <span class="price-tag">32.000đ</span>
+                                <button class="btn-order" onclick="addToCart('Americano Mật Ong')">+ Đặt món</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- SECTION 2: TRÀ TƯƠI & MACCHIATO -->
+            <section id="tea-section" class="menu-section" data-category="tea">
+                <h2 class="section-title">Trà Tươi & Macchiato Thanh Nhã</h2>
+
+                <div class="products-grid">
+                    <article class="menu-card" data-category="tea">
+                        <div class="card-thumb">
+                            <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=500&q=80" alt="Trà Ô Long Dâu Tằm">
+                        </div>
+                        <div class="card-body">
+                            <h3>Trà Ô Long Dâu Tằm</h3>
+                            <p>Trà ô long thơm ngát kết hợp dâu tằm ngâm đường phèn chua ngọt dễ chịu...</p>
+                            <div class="card-footer">
+                                <span class="price-tag">42.000đ</span>
+                                <button class="btn-order" onclick="addToCart('Trà Ô Long Dâu Tằm')">+ Đặt món</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="menu-card" data-category="tea">
+                        <div class="card-thumb">
+                            <span class="badge hot-badge">HOT</span>
+                            <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=500&q=80" alt="Trà Sen Macchiato">
+                        </div>
+                        <div class="card-body">
+                            <h3>Trà Sen Macchiato</h3>
+                            <p>Trà sen Tây Hồ thơm dịu kết hợp lớp phô mai Macchiato sánh mịn, béo...</p>
+                            <div class="card-footer">
+                                <span class="price-tag">45.000đ</span>
+                                <button class="btn-order" onclick="addToCart('Trà Sen Macchiato')">+ Đặt món</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="menu-card" data-category="tea">
+                        <div class="card-thumb">
+                            <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500&q=80" alt="Trà Đào Cam Sả">
+                        </div>
+                        <div class="card-body">
+                            <h3>Trà Đào Cam Sả</h3>
+                            <p>Vị trà đào đậm đà kèm miếng đào giòn ngọt và hương thơm thanh dịu...</p>
+                            <div class="card-footer">
+                                <span class="price-tag">38.000đ</span>
+                                <button class="btn-order" onclick="addToCart('Trà Đào Cam Sả')">+ Đặt món</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- SECTION 3: BÁNH NGỌT & TRÁNG MIỆNG -->
+            <section id="bakery-section" class="menu-section" data-category="bakery">
+                <h2 class="section-title">Bánh Ngọt & Tráng Miệng Thủ Công</h2>
+
+                <div class="products-grid">
+                    <article class="menu-card" data-category="bakery">
+                        <div class="card-thumb">
+                            <span class="badge must-try">MUST TRY</span>
+                            <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=500&q=80" alt="Tiramisu Cacao Ý">
+                        </div>
+                        <div class="card-body">
+                            <h3>Tiramisu Cacao Ý</h3>
+                            <p>Bánh mềm mịn, đậm đà hương rượu rum nhẹ, cà phê espresso và phô mai...</p>
+                            <div class="card-footer">
+                                <span class="price-tag">40.000đ</span>
+                                <button class="btn-order" onclick="addToCart('Tiramisu Cacao Ý')">+ Đặt món</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="menu-card" data-category="bakery">
+                        <div class="card-thumb">
+                            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500&q=80" alt="Croissant Bơ Tươi">
+                        </div>
+                        <div class="card-body">
+                            <h3>Croissant Bơ Tươi</h3>
+                            <p>Bánh sừng bò nướng nóng hổi, vỏ ngoài giòn xốp nhiều lớp, thơm lừng...</p>
+                            <div class="card-footer">
+                                <span class="price-tag">32.000đ</span>
+                                <button class="btn-order" onclick="addToCart('Croissant Bơ Tươi')">+ Đặt món</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="menu-card" data-category="bakery">
+                        <div class="card-thumb">
+                            <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=500&q=80" alt="Cheesecake Chanh Dây">
+                        </div>
+                        <div class="card-body">
+                            <h3>Cheesecake Chanh Dây</h3>
+                            <p>Vị phô mai béo ngậy cân bằng hảo hạng cùng xốt chanh dây chua thanh...</p>
+                            <div class="card-footer">
+                                <span class="price-tag">45.000đ</span>
+                                <button class="btn-order" onclick="addToCart('Cheesecake Chanh Dây')">+ Đặt món</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- YC7: ASIDE đặt cạnh nội dung chính (Món Hot & Khuyến Mãi) -->
+        <aside class="sidebar-aside" id="aside-hot">
+            <!-- Khối Món Hot -->
+            <div class="aside-box hot-specials-box">
+                <span class="aside-tag">★ WEEKLY SPECIALS ★</span>
+                <h3 class="aside-title">Món Hot Trong Tuần</h3>
+                <p class="aside-sub">Được thực khách yêu thích nhất</p>
+
+                <div class="hot-list">
+                    <div class="hot-item">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=100&q=80" alt="Cà Phê Muối">
+                        <div class="hot-info">
+                            <h4>Cà Phê Muối Cozy</h4>
+                            <p>Vị béo đậm đà hấp dẫn ngắt</p>
+                            <span class="hot-price">30.000đ</span>
+                        </div>
+                        <button class="hot-add-btn" onclick="addToCart('Cà Phê Muối Cozy')">+</button>
+                    </div>
+
+                    <div class="hot-item">
+                        <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=100&q=80" alt="Tiramisu">
+                        <div class="hot-info">
+                            <h4>Tiramisu Cacao Ý</h4>
+                            <p>Bánh mềm ngậy thơm vị cacao</p>
+                            <span class="hot-price">40.000đ</span>
+                        </div>
+                        <button class="hot-add-btn" onclick="addToCart('Tiramisu Cacao Ý')">+</button>
+                    </div>
+
+                    <div class="hot-item">
+                        <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=100&q=80" alt="Trà Sen Macchiato">
+                        <div class="hot-info">
+                            <h4>Trà Sen Macchiato</h4>
+                            <p>Thanh mát ngọt hương sen</p>
+                            <span class="hot-price">45.000đ</span>
+                        </div>
+                        <button class="hot-add-btn" onclick="addToCart('Trà Sen Macchiato')">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- YC11: Khối Khuyến Mãi áp dụng BORDER-IMAGE -->
+            <div class="aside-box promo-box">
+                <div class="promo-content">
+                    <div class="promo-icon"><i class="fa-solid fa-gift"></i></div>
+                    <h3>Ưu Đãi Giờ Vàng</h3>
+                    <p class="promo-desc">Giảm 10% cho tất cả bánh ngọt khi mua cùng Cà Phê từ <strong>14:00 - 17:00</strong> mỗi ngày.</p>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- YC8: FOOTER gồm Giờ mở cửa, Thông tin liên hệ, Mạng xã hội, Bản quyền -->
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3><i class="fa-regular fa-clock"></i> GIỜ MỞ CỬA</h3>
+                <p><strong>Thứ 2 - Thứ 6:</strong> 07:00 - 22:30</p>
+                <p><strong>Thứ 7 - Chủ Nhật:</strong> 07:00 - 23:00</p>
+                <p class="small-note">* Nhận order món cuối cùng trước giờ đóng cửa 30 phút.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3><i class="fa-solid fa-location-dot"></i> THÔNG TIN LIÊN HỆ</h3>
+                <p><i class="fa-solid fa-house"></i> 124 Đường Nguyễn Trãi, Phường Bến Thành, Quận 1, TP. Hồ Chí Minh</p>
+                <p><i class="fa-solid fa-phone"></i> Hotline đặt bàn: <strong>0908 123 456</strong></p>
+                <p><i class="fa-solid fa-envelope"></i> Email: contact@thecozybean.vn</p>
+            </div>
+
+            <div class="footer-col">
+                <h3><i class="fa-solid fa-share-nodes"></i> KẾT NỐI VỚI CHÚNG TÔI</h3>
+                <p class="footer-desc">Theo dõi The Cozy Bean trên các mạng xã hội để cập nhật menu mới nhất và các ưu đãi hấp dẫn hàng tuần!</p>
+                <div class="social-links">
+                    <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-btn"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" class="social-btn">Zalo</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <p>Copyright © 2026 <strong>The Cozy Bean Coffee</strong>. All rights reserved. Designed with warmth & minimal aesthetics.</p>
+        </div>
+    </footer>
+
+    <!-- Thông báo Toast khi chọn món -->
+    <div id="toast" class="toast">Đã thêm món vào giỏ hàng!</div>
+
+    <!-- Liên kết file JavaScript nằm trong thư mục js/ -->
+    <script src="script.js"></script>
+</body>
+</html>
