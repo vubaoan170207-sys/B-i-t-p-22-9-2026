@@ -1,0 +1,569 @@
+/* ==========================================================================
+   DARK TECH / CYBERPUNK PORTFOLIO STYLES
+   Font: Plus Jakarta Sans & JetBrains Mono
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #0A0F1D; /* Nền tối sang trọng */
+    color: #F1F5F9;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* TOP ANNOUNCEMENT BAR */
+.top-bar {
+    background-color: #0F172A;
+    padding: 8px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.82rem;
+    color: #94A3B8;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.social-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-top a {
+    color: #94A3B8;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.social-top a:hover {
+    color: #38BDF8;
+    transform: translateY(-2px);
+}
+
+/* NAVBAR GLASSMORPHISM */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 800;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.logo-main {
+    color: #38BDF8;
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
+
+.logo-badge {
+    background: linear-gradient(135deg, #6366F1, #8B5CF6);
+    color: #FFF;
+    padding: 3px 10px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    margin-left: 6px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #94A3B8;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    padding: 8px 16px;
+    border-radius: 12px;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #38BDF8;
+    background: rgba(56, 189, 248, 0.1);
+    box-shadow: inset 0 0 12px rgba(56, 189, 248, 0.15);
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    color: #94A3B8;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.search-btn:hover {
+    color: #38BDF8;
+}
+
+/* HERO SECTION */
+.hero-section {
+    max-width: 1100px;
+    margin: 70px auto 40px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.greetings {
+    font-size: 1.2rem;
+    color: #64748B;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #F8FAFC;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+/* Nổi bật chữ với màu Gradient & Neon */
+.highlight-yellow {
+    background: linear-gradient(135deg, #38BDF8, #818CF8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0 5px;
+}
+
+.gray-tag {
+    color: #64748B;
+    font-weight: 400;
+}
+
+.hero-sub {
+    font-size: 1.2rem;
+    color: #38BDF8;
+    margin-bottom: 40px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 60px;
+}
+
+/* BUTTONS VỚI HIỆU ỨNG GLOW */
+.btn {
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-blue {
+    background: linear-gradient(135deg, #2563EB, #7C3AED);
+    color: #FFF;
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
+}
+
+.btn-blue:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px rgba(124, 58, 237, 0.6);
+}
+
+.btn-outline {
+    background: rgba(255, 255, 255, 0.03);
+    color: #E2E8F0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #38BDF8;
+    color: #38BDF8;
+    transform: translateY(-3px);
+}
+
+/* BIO CARD (Khung giới thiệu cá nhân) */
+.bio-card-wrapper {
+    background: rgba(15, 23, 42, 0.6);
+    border-radius: 24px;
+    padding: 40px;
+    display: flex;
+    gap: 40px;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.bio-content {
+    flex: 1;
+}
+
+.bio-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.bio-icon {
+    font-size: 1.8rem;
+    background: rgba(56, 189, 248, 0.1);
+    padding: 10px;
+    border-radius: 14px;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.bio-header h2 {
+    font-size: 1.6rem;
+    color: #F8FAFC;
+}
+
+.bio-text {
+    color: #94A3B8;
+    font-size: 1rem;
+    margin-bottom: 18px;
+    line-height: 1.7;
+}
+
+.btn-linkedin {
+    display: inline-block;
+    background: #0077B5;
+    color: #FFF;
+    padding: 10px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(0, 119, 181, 0.3);
+    transition: transform 0.3s;
+}
+
+.btn-linkedin:hover {
+    transform: translateY(-2px);
+}
+
+/* Khung Ảnh Cá Nhân Có Viền LED Glow */
+.bio-image-box {
+    width: 300px;
+    height: 360px;
+    flex-shrink: 0;
+    position: relative;
+    border-radius: 20px;
+    padding: 3px;
+    background: linear-gradient(135deg, #38BDF8, #818CF8, #C084FC);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.25);
+}
+
+.bio-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 17px;
+    background-color: #0F172A;
+}
+
+/* PROJECTS SECTION */
+.projects-section {
+    max-width: 1100px;
+    margin: 100px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.section-badge {
+    display: inline-block;
+    background: rgba(56, 189, 248, 0.1);
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #38BDF8;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    margin-bottom: 15px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.section-title {
+    font-size: 2.4rem;
+    color: #F8FAFC;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: #94A3B8;
+    margin-bottom: 35px;
+}
+
+.project-tags {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 45px;
+}
+
+.p-tag {
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #FFF;
+    transition: transform 0.2s;
+}
+
+.p-tag:hover {
+    transform: translateY(-2px);
+}
+
+.tag-blue { background: #2563EB; }
+.tag-green { background: #059669; }
+.tag-dark { background: #334155; }
+.tag-orange { background: #D97706; }
+
+/* Thẻ Dự Án (Project Cards) Phong Cách Cyber */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: rgba(15, 23, 42, 0.5);
+    padding: 32px;
+    border-radius: 20px;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    border-color: #38BDF8;
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.15);
+}
+
+.p-icon {
+    font-size: 2rem;
+    color: #38BDF8;
+    margin-bottom: 18px;
+}
+
+.project-card h3 {
+    font-size: 1.25rem;
+    color: #F8FAFC;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: #94A3B8;
+    font-size: 0.92rem;
+    margin-bottom: 22px;
+}
+
+.tech-stack {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #818CF8;
+    text-transform: uppercase;
+}
+
+/* NEWS SECTION */
+.news-section {
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 0 20px;
+}
+
+.news-item {
+    background: rgba(15, 23, 42, 0.5);
+    padding: 22px 28px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: border-color 0.3s;
+}
+
+.news-item:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+}
+
+.news-date {
+    font-size: 0.85rem;
+    color: #38BDF8;
+    font-weight: 600;
+    width: 140px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.news-content {
+    flex: 1;
+    padding: 0 20px;
+    font-size: 0.95rem;
+    color: #CBD5E1;
+}
+
+.btn-read {
+    background: rgba(56, 189, 248, 0.1);
+    color: #38BDF8;
+    padding: 7px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-read:hover {
+    background: rgba(56, 189, 248, 0.2);
+}
+
+/* BLOG SECTION */
+.blog-section {
+    max-width: 1100px;
+    margin: 100px auto;
+    padding: 0 20px;
+}
+
+.blog-container {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
+    padding: 50px;
+    border-radius: 24px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.blog-left h2 {
+    font-size: 2.2rem;
+    color: #38BDF8;
+    margin-bottom: 15px;
+}
+
+.blog-desc {
+    color: #94A3B8;
+    margin-bottom: 25px;
+    font-size: 1rem;
+}
+
+.btn-blog-action {
+    display: inline-block;
+    background: linear-gradient(135deg, #F43F5E, #E11D48);
+    color: #FFF;
+    padding: 12px 26px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 0 20px rgba(244, 63, 94, 0.3);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background: #070A13;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-motto {
+    font-size: 0.95rem;
+    letter-spacing: 4px;
+    color: #64748B;
+    font-weight: 700;
+    margin-bottom: 25px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.footer-motto span {
+    color: #38BDF8;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #94A3B8;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+    color: #38BDF8;
+}
+
+.footer-copyright {
+    color: #475569;
+    font-size: 0.82rem;
+}
+
+/* SCROLL TOP BUTTON */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #1E293B;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #38BDF8;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 99;
+    transition: all 0.3s;
+}
+
+#scrollTopBtn:hover {
+    background: #38BDF8;
+    color: #0F172A;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .nav-menu { display: none; }
+    .hero-title { font-size: 2.3rem; }
+    .bio-card-wrapper, .blog-container { flex-direction: column; }
+    .bio-image-box { width: 100%; height: 320px; }
+    .news-item { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .news-content { padding: 0; }
+}
